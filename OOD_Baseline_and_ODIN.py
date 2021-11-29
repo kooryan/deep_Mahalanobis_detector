@@ -32,8 +32,8 @@ def main():
     args.outf = args.outf + args.net_type + '_' + args.dataset + '/'
     if os.path.isdir(args.outf) == False:
         os.mkdir(args.outf)
-    # torch.cuda.manual_seed(0)
-    # torch.cuda.set_device(args.gpu)
+    torch.cuda.manual_seed(0)
+    torch.cuda.set_device(args.gpu)
     
     # check the in-distribution dataset
     if args.dataset == 'cifar100':
